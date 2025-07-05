@@ -1,59 +1,54 @@
-/* Page Style */
 body {
-    text-align: center;
-    font-family: sans-serif;
-    background: #f8f8f8;
-    margin: 0;
-    padding: 20px;
-  }
-  
-  /* Title Centering */
-  .center-title {
-    text-align: center;
-    font-size: 2em;
-    margin-bottom: 10px;
-  }
-  
-  /* Game Container with Background */
-  #game-container {
-    width: 400px;
-    height: 400px;
-    position: relative;
-    margin: 0 auto; /* center horizontally */
-    background-image: url('https://somtiee.github.io/BOUNDLESS-SNAKE-GAME/bg.jpg'); /* 🔁 Change to your actual image path */
-    background-size: cover;
-    background-position: center;
-  }
-  
-  /* Canvas sits above the background */
-  #gameCanvas {
-    position: absolute;
-    top: 0;
-    left: 0;
-  }
-  
-  /* Mobile Controls */
-  #mobile-controls {
-    margin-top: 15px;
-  }
-  #mobile-controls .row {
-    margin: 5px;
-  }
-  #mobile-controls .btn {
-    font-size: 24px;
-    padding: 10px 15px;
-  }
-  
-  /* Scoreboard */
-  #scoreboard {
-    margin: 10px auto;
-    font-weight: bold;
-  }
-  
-  /* Game Over Message */
-  #gameover-text {
-    font-size: 18px;
-    color: crimson;
-    margin-top: 10px;
-  }
-  
+  text-align: center;
+  font-family: sans-serif;
+  background: #f8f8f8;
+  margin: 0;
+  padding: 20px;
+}
+
+.center-title {
+  text-align: center;
+  font-size: 2em;
+  margin-bottom: 10px;
+}
+
+#game-container {
+  width: 400px;
+  height: 400px;
+  position: relative;
+  margin: 0 auto;
+  background-image: url('https://somtiee.github.io/BOUNDLESS-SNAKE-GAME/bg.jpg');
+  background-size: cover;
+  background-position: center;
+  opacity: 0.8;
+}
+
+/* Make background opaque but keep canvas content full */
+#gameCanvas {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+}
+
+#mobile-controls {
+  margin-top: 15px;
+}
+#mobile-controls .row {
+  margin: 5px;
+}
+#mobile-controls .btn {
+  font-size: 24px;
+  padding: 10px 15px;
+}
+
+#scoreboard {
+  margin: 10px auto;
+  font-weight: bold;
+}
+
+#gameover-text {
+  font-size: 18px;
+  color: crimson;
+  margin-top: 10px;
+}
