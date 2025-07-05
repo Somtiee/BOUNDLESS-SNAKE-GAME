@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Snake Game 🍓</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <h1 class="center-title">BERRIFIED SNAKE 🍓</h1>
+
+  <select id="difficulty">
+    <option value="easy">Easy</option>
+    <option value="medium">Medium</option>
+    <option value="hard">Hard</option>
+  </select>
+
+  <!-- Game Arena Wrapper -->
+  <div id="game-container">
+    <canvas id="gameCanvas" width="400" height="400"></canvas>
+  </div>
+
+  <!-- Scoreboard -->
+  <div id="scoreboard">
+    <p>Highscore (<span id="current-diff">Easy</span>): <span id="highscore">0</span></p>
+  </div>
+
+  <!-- Mobile Controls -->
+  <div id="mobile-controls">
+    <div class="row">
+      <button class="btn" onclick="setDirection('UP')">⬆️</button>
+    </div>
+    <div class="row">
+      <button class="btn" onclick="setDirection('LEFT')">⬅️</button>
+      <button class="btn" onclick="setDirection('DOWN')">⬇️</button>
+      <button class="btn" onclick="setDirection('RIGHT')">➡️</button>
+    </div>
+  </div>
+
+  <!-- Restart Button & Game Over Text -->
+  <button id="restartBtn" style="display: none;">🔁 Restart Game</button>
+  <p id="gameover-text"></p>
+
+  <!-- Sound Effects -->
+  <audio id="eatSound" src="sounds/eat.mp3" preload="auto"></audio>
+  <audio id="crashSound" src="sounds/crash.mp3" preload="auto"></audio>
+
+  <!-- Game Logic -->
+  <script src="game.js"></script>
+</body>
+</html>
