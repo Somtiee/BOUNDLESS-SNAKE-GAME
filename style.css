@@ -23,7 +23,7 @@ body {
     background-image: url('https://somtiee.github.io/BOUNDLESS-SNAKE-GAME/bg.jpg'); /* 🔁 Change to your actual image path */
     background-size: cover;
     background-position: center;
-    opacity: 0.5;
+    opacity: 0.95;
   }
   
   /* Canvas sits above the background */
