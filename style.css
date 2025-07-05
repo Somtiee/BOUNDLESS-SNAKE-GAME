@@ -20,6 +20,9 @@ body {
   background-image: url('https://somtiee.github.io/BOUNDLESS-SNAKE-GAME/BGE1.jpg');
   background-size: cover;
   background-position: center;
+   border: 5px solid #444; /* Add this line for border */
+  border-radius: 10px;     /* Optional: rounded corners */
+  box-shadow: 0 0 10px rgba(0,0,0,0.5); /* Optional: soft shadow */
 }
 
 /* Make background opaque but keep canvas content full */
