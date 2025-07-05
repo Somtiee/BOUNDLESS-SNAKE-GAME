@@ -7,13 +7,6 @@ let direction = "RIGHT";
 let score = 0;
 let isGameOver = false;
 
-function setDirection(newDir) {
-  if (newDir === "LEFT" && direction !== "RIGHT") direction = "LEFT";
-  if (newDir === "UP" && direction !== "DOWN") direction = "UP";
-  if (newDir === "RIGHT" && direction !== "LEFT") direction = "RIGHT";
-  if (newDir === "DOWN" && direction !== "UP") direction = "DOWN";
-}
-
 // 🍓 Fruit
 let strawberry = {
   x: Math.floor(Math.random() * 19 + 1) * box,
@@ -32,7 +25,6 @@ let highScores = JSON.parse(localStorage.getItem("snakeHighScores")) || {
   hard: 0,
 };
 
-// Set initial highscore and label
 document.getElementById("highscore").textContent = highScores[currentDifficulty];
 document.getElementById("current-diff").textContent = capitalize(currentDifficulty);
 
@@ -71,6 +63,14 @@ canvas.addEventListener("touchend", (e) => {
     else if (dy < 0 && direction !== "DOWN") direction = "UP";
   }
 });
+
+// ✅ Fix: Direction handler for mobile buttons
+function setDirection(newDir) {
+  if (newDir === "LEFT" && direction !== "RIGHT") direction = "LEFT";
+  if (newDir === "UP" && direction !== "DOWN") direction = "UP";
+  if (newDir === "RIGHT" && direction !== "LEFT") direction = "RIGHT";
+  if (newDir === "DOWN" && direction !== "UP") direction = "DOWN";
+}
 
 // 🕹️ Game loop
 function draw() {
