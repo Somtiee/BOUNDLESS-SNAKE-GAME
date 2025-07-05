@@ -20,7 +20,6 @@ body {
   background-image: url('https://somtiee.github.io/BOUNDLESS-SNAKE-GAME/bg.jpg');
   background-size: cover;
   background-position: center;
-  opacity: 0.4;
 }
 
 /* Make background opaque but keep canvas content full */
