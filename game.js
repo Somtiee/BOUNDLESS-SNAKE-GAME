@@ -7,6 +7,13 @@ let direction = "RIGHT";
 let score = 0;
 let isGameOver = false;
 
+function setDirection(newDir) {
+  if (newDir === "LEFT" && direction !== "RIGHT") direction = "LEFT";
+  if (newDir === "UP" && direction !== "DOWN") direction = "UP";
+  if (newDir === "RIGHT" && direction !== "LEFT") direction = "RIGHT";
+  if (newDir === "DOWN" && direction !== "UP") direction = "DOWN";
+}
+
 // 🍓 Fruit
 let strawberry = {
   x: Math.floor(Math.random() * 19 + 1) * box,
