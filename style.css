@@ -20,7 +20,7 @@ body {
     height: 400px;
     position: relative;
     margin: 0 auto; /* center horizontally */
-    background-image: url('bg.jpg'); /* 🔁 Change to your actual image path */
+    background-image: url('https://somtiee.github.io/BOUNDLESS-SNAKE-GAME/bg.jpg'); /* 🔁 Change to your actual image path */
     background-size: cover;
     background-position: center;
     opacity: 0.5;
